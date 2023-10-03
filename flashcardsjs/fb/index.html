@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<div id="fb-root"></div>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.4/lodash.min.js"></script>
+<script src="post_info.js" ></script>
+<script src="post_stats.js" ></script>
+
+
+<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with"
+     data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"
+     onlogin="checkLoginState();"></div>
+
+<br>
+<input type="text" id="post_url">
+<button onclick="getInfo()">
+    Get info
+</button>
+
+<div>
+    <p>Post Date Picture Text Group Likes Comments Link shared? Number of sales</p>
+    <p><span id="post_id"></span>&#9;
+        <span id="post_date"></span>&#9;
+        <span id="post_pic"></span>&#9;
+        <span id="post_txt"></span>&#9;
+        <span id="post_grp"></span>&#9;
+        <span id="post_likes"></span>&#9;
+        <span id="post_comments"></span>&#9;
+        <span id="post_lnk_shared"></span>&#9;
+    </p>
+</div>
+<hr>
+<h2>Posts</h2>
+<textarea name="posts_urls" id="posts_urls" cols="30" rows="10"></textarea>
+<button onclick="process()">
+    Get info
+</button>
+<ul id="result_list"></ul>
+
+</html>
